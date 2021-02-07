@@ -33,9 +33,13 @@ from hachoir.parser import createParser
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["ffmpegrobot"]))
 async def ffmpegrobot_ad(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
+    if update.from_user.id not in Config.AUTH_USERS:
+        await bot.delete_messages(
             chat_id=update.chat.id,
+                      chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
         return
     TRChatBase(update.from_user.id, update.text, "ffmpegrobot")
     await bot.send_message(
@@ -48,9 +52,13 @@ async def ffmpegrobot_ad(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["trim"]))
 async def trim(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
+    if update.from_user.id not in Config.AUTH_USERS:
+        await bot.delete_messages(
             chat_id=update.chat.id,
+                      chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
         return
     TRChatBase(update.from_user.id, update.text, "trim")
     saved_file_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".FFMpegRoBot.mkv"
