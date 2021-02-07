@@ -19,13 +19,13 @@ else:
     from config import Config
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading"
-    STATUS_DOWNLOADING = "Downloading"
-    STATUS_WAITING = "Queued"
-    STATUS_FAILED = "Failed. Cleaning download"
-    STATUS_CANCELLED = "Cancelled"
-    STATUS_ARCHIVING = "Archiving"
-    STATUS_EXTRACTING = "Extracting"
+    STATUS_UPLOADING = "Subiendo"
+    STATUS_DOWNLOADING = "Descargando"
+    STATUS_WAITING = "Puesto en cola"
+    STATUS_FAILED = "Error. Su archivo será eliminado de mi base de datos."
+    STATUS_CANCELLED = "Cancelado"
+    STATUS_ARCHIVING = "Archivando"
+    STATUS_EXTRACTING = "Extrayendo"
 
 
 PROGRESS_MAX_SIZE = 100 // 8
@@ -116,9 +116,9 @@ def is_magnet(url: str):
     return False
 
 def new_thread(fn):
-    """To use as decorator to make a function call threaded.
-    Needs import
-    from threading import Thread"""
+    """Para usar como decorador para hacer una llamada de función roscada.
+    Necesita importación
+    de hilo de importación hilo"""
 
     def wrapper(*args, **kwargs):
         thread = threading.Thread(target=fn, args=args, kwargs=kwargs)
