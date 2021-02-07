@@ -32,9 +32,13 @@ from helper_funcs.display_progress import progress_for_pyrogram
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["getlink"]))
 async def get_link(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
+    if update.from_user.id not in Config.AUTH_USERS:
+        await bot.delete_messages(
             chat_id=update.chat.id,
+                      chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
         return
     TRChatBase(update.from_user.id, update.text, "getlink")
     logger.info(update.from_user)
