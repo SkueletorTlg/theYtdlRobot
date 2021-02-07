@@ -34,9 +34,6 @@ async def generate_screen_shot(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
         return
     TRChatBase(update.from_user.id, update.text, "generatescss")
     if update.reply_to_message is not None:
