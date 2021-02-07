@@ -39,8 +39,8 @@ from PIL import Image
 
 @pyrogram.Client.on_callback_query()
 async def button(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    if update.from_user.id in Config.BANNED_USERS:
+        await update.reply_text("You are B A N N E D")
             chat_id=update.message.chat.id,
             message_ids=update.message.message_id,
             revoke=True
