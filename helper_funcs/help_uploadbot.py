@@ -38,7 +38,7 @@ def DownLoadFile(url, file_name, chunk_size, client, ud_type, message_id, chat_i
                         client.edit_message_text(
                             chat_id,
                             message_id,
-                            text="{}: {} of {}".format(
+                            text="{}: {} de {}".format(
                                 ud_type,
                                 humanbytes(downloaded_size),
                                 humanbytes(total_size)
