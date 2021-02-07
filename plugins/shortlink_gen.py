@@ -24,4 +24,4 @@ async def zagl_short_link(bot, update):
         else:
             await generate_short_link(update, url_to_shorten, None)
     else:
-        await update.reply_text(f"Please enter URL to shorten Ex:/zagl https://google.com")
+        await update.reply_text(f"Ingrese la URL para acortar. \nEjemplo: /zagl https://google.com")
