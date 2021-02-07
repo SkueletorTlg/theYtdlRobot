@@ -34,8 +34,8 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["converttoaudio"]))
 async def convert_to_audio(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    if update.from_user.id in Config.BANNED_USERS:
+        await update.reply_text("You are B A N N E D")
             chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
