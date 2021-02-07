@@ -6,7 +6,7 @@ Escriba /help para más información."""
 
     RENAME_403_ERR = "Perdón, tú no tienes permitido renombrar este archivo"
     ABS_TEXT = "¿Qué estás tratando de hacer, compañero?"
-    UPGRADE_TEXT = """ @RenameArchive_Bot Planes de pago:
+    UPGRADE_TEXT = " <b>Próximamente :(</b>"
     #-------
     #Plan: GRATIS
     #Límite de tamaño de archivo: 2Gb
@@ -68,8 +68,7 @@ Escriba /help para más información."""
     #👉 <a href="#">Extraer medios comprimidos de Telegram</a>
     #👉 PLUS, todas las funciones nuevas que se agregarán en el bot próximamente*.
     #-------
-    #NOTA: Después del pago, debe tomar una captura de pantalla del recibo y enviarla al administrador.
-    @DKzippO """
+    #NOTA: Después del pago, debe tomar una captura de pantalla del recibo y enviarla al administrador. @DKzippO """
     FORMAT_SELECTION = "Seleccione el formato deseado: <a href='{}'>el tamaño del archivo puede ser aproximado</a> \nSi desea configurar una miniatura personalizada, envíe la foto antes o rápidamente después de tocar cualquiera de los botones a continuación.\nPuede usar / deletethumbnail para eliminar la miniatura generada automáticamente."
     SET_CUSTOM_USERNAME_PASSWORD = """Si desea descargar videos premium, proporcione en el siguiente formato:
 ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
