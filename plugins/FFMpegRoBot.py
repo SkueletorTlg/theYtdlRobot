@@ -36,9 +36,6 @@ async def ffmpegrobot_ad(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
         return
     TRChatBase(update.from_user.id, update.text, "ffmpegrobot")
     await bot.send_message(
@@ -54,9 +51,6 @@ async def trim(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
         return
     TRChatBase(update.from_user.id, update.text, "trim")
     saved_file_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".FFMpegRoBot.mkv"
