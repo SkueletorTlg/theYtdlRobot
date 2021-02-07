@@ -63,24 +63,24 @@ async def tg_to_gdrive_upload(bot, update):
         size = get_readable_file_size(get_path_size(download_directory))
         try:
             await bot.edit_message_text(
-                text="Download Completed!!!\n Upload in progress",
+                text="¡¡¡Descarga completada!!!\n Subida en proceso",
                 chat_id=reply_message.chat.id,
                 message_id=reply_message.message_id
             )
         except Exception as e:
             logger.info(str(e))
             pass
-        logger.info(f"Upload Name : {up_name}")
+        logger.info(f"Nombre del archivo subido: {up_name}")
         drive = gdriveTools.GoogleDriveHelper(up_name)
         gd_url, index_url = drive.upload(download_directory)
         button = []
-        button.append([pyrogram.types.InlineKeyboardButton(text="☁️ CloudUrl ☁️", url=f"{gd_url}")])
+        button.append([pyrogram.types.InlineKeyboardButton(text="☁️ Enlace de la nube", url=f"{gd_url}")])
         if Config.INDEX_URL:
             logger.info(index_url)
-            button.append([pyrogram.types.InlineKeyboardButton(text="ℹ️ IndexUrl ℹ️", url=f"{index_url}")])
+            button.append([pyrogram.types.InlineKeyboardButton(text="ℹ️ Enlace del índice", url=f"{index_url}")])
         button_markup = pyrogram.types.InlineKeyboardMarkup(button)
         await bot.send_message(
-            text=f"🤖: <b>{up_name}</b> has been Uploaded successfully to your Cloud🤒 \n📀 Size: {size}",
+            text=f"🤖: <b>{up_name}</b> Se ha subido con éxito a su nube 🤒 \n📀 Tamaño: {size}",
             chat_id=update.chat.id,
             reply_to_message_id=update.message_id,
             reply_markup=button_markup)
