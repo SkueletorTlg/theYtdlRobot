@@ -1,7 +1,9 @@
 class Translation(object):
-    START_TEXT = """¡Hola, este es el bot para renombrar archivos!
+    START_TEXT = """¡Hola, mi principal función es renombrar archivos!
     	    
 <b>Por favor envíeme cualquier archivo de Telegram y responda a ese archivo con /rename Nuevo nombre.extensión.</b>
+
+Pero también puedo hacer otras cosas...
 Escriba /help para más información."""
 
     RENAME_403_ERR = "Perdón, tú no tienes permitido renombrar este archivo"
@@ -132,7 +134,7 @@ Expira: 10/8/2099
 🔹<b>Sólo funciona con 2 imágenes y en modo álbum multimedia.</b>
 
 <b>➡ Obtenga un sticker como archivo descargable:</b>
-🔹1. Envíame un sticker sin animación y ya :D
+🔹1. Envíame un sticker sin animación y listo, solo queda esperar.
 
 ➡ Para más bots, únete a @BotsDeAyuda
 Hecho con amor por:</b> 👉 <a href="https://t.me/DKzippO">Skueletor</a> ❤️"""
