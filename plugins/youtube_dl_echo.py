@@ -127,8 +127,8 @@ async def echo(bot, update):
     # https://github.com/rg3/youtube-dl/issues/2630#issuecomment-38635239
     if e_response and "nonnumeric port" not in e_response:
         # logger.warn("Status : FAIL", exc.returncode, exc.output)
-        error_message = e_response.replace("please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.", "")
-        if "This video is only available for registered users." in error_message:
+        error_message = e_response.replace("Informe este problema en https://yt-dl.org/bug. Asegúrese de estar utilizando la última versión; consulte https://yt-dl.org/update sobre cómo actualizar. Asegúrese de llamar a youtube-dl con la marca --verbose e incluya su salida completa.", "")
+        if "Este video solo está disponible para usuarios registrados." in error_message:
             error_message += Translation.SET_CUSTOM_USERNAME_PASSWORD
         await bot.send_message(
             chat_id=update.chat.id,
@@ -211,42 +211,42 @@ async def echo(bot, update):
                 cb_string = "{}|{}|{}".format("audio", "320k", "mp3")
                 inline_keyboard.append([
                     pyrogram.types.InlineKeyboardButton(
-                        "MP3 " + "(" + "64 kbps" + ")", callback_data=cb_string_64.encode("UTF-8")),
+                        "🎵 MP3 " + "(" + "64 kbps" + ")", callback_data=cb_string_64.encode("UTF-8")),
                     pyrogram.types.InlineKeyboardButton(
-                        "MP3 " + "(" + "128 kbps" + ")", callback_data=cb_string_128.encode("UTF-8"))
+                        "🎵 MP3 " + "(" + "128 kbps" + ")", callback_data=cb_string_128.encode("UTF-8"))
                 ])
                 inline_keyboard.append([
                     pyrogram.types.InlineKeyboardButton(
-                        "MP3 " + "(" + "320 kbps" + ")", callback_data=cb_string.encode("UTF-8"))
+                        "🎵 MP3 " + "(" + "320 kbps" + ")", callback_data=cb_string.encode("UTF-8"))
                 ])
         else:
             format_id = response_json["format_id"]
             format_ext = response_json["ext"]
             cb_string_file = "{}|{}|{}".format(
-                "file", format_id, format_ext)
+                "📁 archivo", format_id, format_ext)
             cb_string_video = "{}|{}|{}".format(
-                "video", format_id, format_ext)
+                "🎬 video", format_id, format_ext)
             inline_keyboard.append([
                 pyrogram.types.InlineKeyboardButton(
-                    "SVideo",
+                    "🎬 SVideo",
                     callback_data=(cb_string_video).encode("UTF-8")
                 ),
                 pyrogram.types.InlineKeyboardButton(
-                    "DFile",
+                    "📁 DFile",
                     callback_data=(cb_string_file).encode("UTF-8")
                 )
             ])
             cb_string_file = "{}={}={}".format(
-                "file", format_id, format_ext)
+                "📁 archivo", format_id, format_ext)
             cb_string_video = "{}={}={}".format(
-                "video", format_id, format_ext)
+                "🎬 video", format_id, format_ext)
             inline_keyboard.append([
                 pyrogram.types.InlineKeyboardButton(
-                    "video",
+                    "🎬 video",
                     callback_data=(cb_string_video).encode("UTF-8")
                 ),
                 pyrogram.types.InlineKeyboardButton(
-                    "file",
+                    "📁 archivo",
                     callback_data=(cb_string_file).encode("UTF-8")
                 )
             ])
