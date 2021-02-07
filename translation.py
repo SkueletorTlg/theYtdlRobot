@@ -91,7 +91,7 @@ ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
     NO_CUSTOM_THUMB_NAIL_FOUND = "No se encontró ninguna miniatura personalizada.🤒"
     NO_VOID_FORMAT_FOUND = "Error...\n<b>YouTubeDL</b> dice: {}"
     USER_ADDED_TO_DB = "Usuario <a href='tg://user?id={}'>{}</a> añadido a {} hasta {}."
-    ABOUT_ME = """<b>No hay mucho que decir...\n Un bot que puede cambiar el nombre de los archivos de Telegram. \n Puedes establecer una miniatura permanente para el archivo para no tener que enviar miniaturas personalizadas todo el tiempo.\n \n También puedo convertir archivos en videos. \n Por favor, califícame si me encuentras útil: https://t.me/tlgrmcbot?start=renamearchive_bot-review ❤️</b>"""
+    ABOUT_ME = """<b>Realmente no hay mucho que decir...\n Un bot que puede cambiar el nombre de los archivos de Telegram. \n Puedo establecer una miniatura permanente para el archivo para no tener que enviar miniaturas personalizadas todo el tiempo.\n\n Puedo convertir archivos en videos o audios. \n\n También puedo generar un link de descarga directa bastante rápido 🙈. \n\n Si quieres información detallada de mi, utiliza el comando /help \n\n Por favor, califícame si me encuentras útil: https://t.me/tlgrmcbot?start=renamearchive_bot-review ❤️</b>"""
     CURENT_PLAN_DETAILS = """<b>Detalles del plan actual</b>
 --------
 Telegram ID: <code>{}</code>
