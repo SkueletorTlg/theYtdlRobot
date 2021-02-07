@@ -78,7 +78,7 @@ ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
     UPLOAD_START = "<b>😀 La descarga ha terminado, estoy intentando subir el archivo a Telegram...</b>"
     RCHD_BOT_API_LIMIT = "El tamaño del archivo es muy grande 😔. Sin embargo, intentando subirlo..."
     RCHD_TG_API_LIMIT = "Descargado en {} segundos.\nTamaño de archivo detectado: {}\nLo siento. Pero no puedo subir archivos de más de 2 GB debido a las limitaciones de la API de Telegram."
-    AFTER_SUCCESSFUL_UPLOAD_MSG =  "**Gracias por usarme 🤓**\n Por favor, califícame si me encuentras útil: https://t.me/tlgrmcbot?start=renamearchive_bot-review ❤️"
+    AFTER_SUCCESSFUL_UPLOAD_MSG =  "<b>Gracias por usarme 🤓</b>\n Por favor, califícame si me encuentras útil: https://t.me/tlgrmcbot?start=renamearchive_bot-review ❤️"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Descargado en {} segundos.\nSubido en {} segundos."
     NOT_AUTH_USER_TEXT = "Por favor, escribe /upgrade mejorar tu tu suscripción y para posteriormente hacer eso."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Tamaño de archivo detectado: {}.Los usuarios gratuitos sólo pueden subir: {}\nPor favor, escribe /upgrade para mejorar tu suscripción.\nSi crees que esto se trata de un error, por favor contacta a <a href='https://telegram.dog/DKzippO'>Skueletor</a>"
@@ -86,7 +86,7 @@ ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
     DEL_ETED_CUSTOM_THUMB_NAIL = "Miniatura borrada con éxito🤦"
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ La miniatura personalizada fue eliminada correctamente."
     SAVED_RECVD_DOC_FILE = "<b>Archivo descargado correctamente 😎</b>"
-    CUSTOM_CAPTION_UL_FILE = "<b>Hecho con:</b> @RenameArchive_bot ❤️"
+    CUSTOM_CAPTION_UL_FILE = "Renombrado con: @RenameArchive_bot ❤️"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No se encontró ninguna miniatura personalizada.🤒"
     NO_VOID_FORMAT_FOUND = "Error...\n<b>YouTubeDL</b> dice: {}"
     USER_ADDED_TO_DB = "Usuario <a href='tg://user?id={}'>{}</a> añadido a {} hasta {}."
@@ -95,22 +95,48 @@ ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
 --------
 Telegram ID: <code>{}</code>
 Nombre del plan: GRATIS
-Expira: 10/8/2099"""
-    HELP_USER = """<b>El modo de uso del bot es el siguiente:</b>
-    	    
-    🔹1. Envíame cualquier archivo de Telegram.
-    🔹2. Envíe una foto para usarla como miniatura personalizada.
-    🔹3. Responder al archivo con "/rename (NUEVO NOMBRE.EXTENSION)".
-    	    
-    <b>CARACTERÍSTICAS</b>
-    	    
-    ➡ Cambiar el nombre del archivo de Telegram con una miniatura personalizada.
-    ➡ Convertir archivo que se puede transmitir (video) en archivo.
-    	    
-    ------------------------
-    	    
-    ➡ Para más bots, únete a @BotsDeAyuda
-    Hecho con amor por:</b> 👉 <a href="https://t.me/DKzippO">Skueletor</a> ❤️"""
+Expira: 10/8/2099
+<b>Puedes mejorar tu suscripción con el comando /upgrade</b>"""
+    HELP_USER = """<b>El modo de uso del bot es el siguiente 🤓:</b>
+    
+<b>➡ Renombrar archivos:</b>
+🔹1. Envíame cualquier archivo de Telegram.
+🔹2. Envíe una foto para usarla como miniatura personalizada.
+🔹3. Responder al archivo con "/rename (NUEVO NOMBRE.EXTENSION)".
+
+<b>➡ Convertir de Archivo a Video</b>
+🔹1. Envíame cualquier archivo de video.
+🔹2. Responda al archivo con "/converttovideo".
+
+<b>➡ Convertir de Archivo a Audio:</b>
+🔹1. Envíame un archivo de audio.
+🔹2. Responder al archivo con "/converttoaudio".
+
+<b>➡ Recortar videos:</b>
+🔹1. Envíame cualquier archivo de Telegram.
+🔹2. Responde al archivo con el comando /downloadmedia para descargarlo en la base de datos del bot.
+🔹3. Responder al archivo con "/trim HH:MM:SS [HH:MM:SS]".
+🔹Ejemplo: /trim 00:01:36 00:01:49 (donde 00:01:36 es el tiempo de inicio y 00:01:49 el tiempo final).
+
+<b>➡ Generar capturas de pantalla:</b>
+🔹1. Envíame un video o un archivo de video de Telegram.
+🔹2. Responda al archivo con "/generatescss" y el bot le dará 9 capturas de pantalla del archivo.
+
+<b>➡ Genere un link de descarga directa de cualquier archivo:</b>
+🔹1. Envíame cualquier archivo de Telegram.
+🔹2. Responde al archivo con el comando "/getlink"
+🔹<b>El enlace será válido sólo por 5 días.</b>
+
+<b>➡ Genere miniaturas personalizadas:</b>
+🔹1. Envíame 2 imágenes en un álbum multimedia.
+🔹2. Responde al álbum con el coamando "/generatecustomthumbnail"
+🔹<b>Sólo funciona con 2 imágenes y en modo álbum multimedia.</b>
+
+<b>➡ Obtenga un sticker como archivo descargable:</b>
+🔹1. Envíame un sticker sin animación y ya :D
+
+➡ Para más bots, únete a @BotsDeAyuda
+Hecho con amor por:</b> 👉 <a href="https://t.me/DKzippO">Skueletor</a> ❤️"""
     REPLY_TO_DOC_GET_LINK = "<b>Responda a un archivo de Telegram para obtener un enlace de descarga directa de alta velocidad</b>"
     REPLY_TO_DOC_FOR_C2V = "<b> Responda a un archivo con /c2v para convertirlo en un archivo de video que se puede transmitir</b>"
     REPLY_TO_DOC_FOR_SCSS = "<b>Responde a un archivo de Telegram para obtener capturas de pantalla</b>"
@@ -126,7 +152,7 @@ Expira: 10/8/2099"""
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "El álbum multimedia debe contener solo dos fotos. Vuelva a enviar el álbum multimedia y vuelva a intentarlo o envíe solo dos fotos en un álbum."
     INVALID_UPLOAD_BOT_URL_FORMAT = "El formato de la URL es incorrecto. asegúrese de que su URL comience con http:// o https://. Puede establecer un nombre de archivo personalizado usando el enlace de formato | Nombre_Archivo.extensión"
     ABUSIVE_USERS = "No está autorizado a utilizar este bot. Si cree que esto es un error, comuníquese con @DKzippO para eliminar esta restricción."
-    FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "https://telegram.dog/RenameArchive_bot"
+    FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "Mi enlace es: https://telegram.dog/RenameArchive_bot, puedes compartirlo donde tú quieras :D"
     EXTRACT_ZIP_INTRO_ONE = "Primero envíe un archivo comprimido, luego responda /unzip para descomprimir el archivo."
     EXTRACT_ZIP_INTRO_THREE = "Analizando archivo recibido. ⚠️ Esto puede llevar algún tiempo. Por favor sea paciente... "
     UNZIP_SUPPORTED_EXTENSIONS = ("zip", "rar")
