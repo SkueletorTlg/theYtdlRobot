@@ -3,7 +3,7 @@ class Translation(object):
     	    
 <b>Por favor envíeme cualquier archivo de Telegram y responda a ese archivo con /rename Nuevo nombre.extensión.</b>
 
-Pero también puedo hacer otras cosas...
+Pero también puedes utilizarme para hacer otras cosas...
 Escriba /help para más información."""
 
     RENAME_403_ERR = "Perdón, tú no tienes permitido renombrar este archivo"
