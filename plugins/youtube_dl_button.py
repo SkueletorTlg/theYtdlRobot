@@ -170,7 +170,7 @@ async def youtube_dl_call_back(bot, update):
     t_response = stdout.decode().strip()
     logger.info(e_response)
     logger.info(t_response)
-    ad_string_to_replace = "please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output."
+    ad_string_to_replace = "Informe este problema en https://yt-dl.org/bug. Asegúrese de estar utilizando la última versión; consulte https://yt-dl.org/update sobre cómo actualizar. Asegúrese de llamar a youtube-dl con la marca --verbose e incluya su salida completa."
     if e_response and ad_string_to_replace in e_response:
         error_message = e_response.replace(ad_string_to_replace, "")
         await bot.edit_message_text(
@@ -330,9 +330,9 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @AnyDLBot"
+                caption = "© @RenameArchive_bot"
                 if is_w_f:
-                    caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
+                    caption = "Aquiere el plan D con /upgrade para remover la marca de agua\n© @RenameArchive_bot"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
