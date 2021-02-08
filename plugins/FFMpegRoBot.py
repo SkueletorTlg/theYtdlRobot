@@ -33,7 +33,7 @@ from hachoir.parser import createParser
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["ffmpegrobot"]))
 async def ffmpegrobot_ad(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id not in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
                       chat_id=update.chat.id,
@@ -52,7 +52,7 @@ async def ffmpegrobot_ad(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["trim"]))
 async def trim(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id not in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
                       chat_id=update.chat.id,
@@ -169,7 +169,7 @@ async def trim(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["storageinfo"]))
 async def storage_info(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id not in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
@@ -199,7 +199,7 @@ async def storage_info(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["clearffmpegmedia"]))
 async def clear_media(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id not in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
@@ -219,8 +219,8 @@ async def clear_media(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["downloadmedia"]))
 async def download_media(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
+    if update.from_user.id not in Config.BANNED_USERS:
+        await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
