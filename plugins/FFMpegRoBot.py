@@ -36,7 +36,6 @@ async def ffmpegrobot_ad(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
-                      chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
         )
@@ -55,7 +54,6 @@ async def trim(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
-                      chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
         )
