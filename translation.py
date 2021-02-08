@@ -109,7 +109,8 @@ Expira: 10/8/2099
 ➡ Para más bots, únete a @BotsDeAyuda
 Hecho con amor por:</b> 👉 <a href="https://t.me/DKzippO">Skueletor</a> ❤️"""
     REPLY_TO_DOC_GET_LINK = "<b>Responda a un archivo de Telegram para obtener un enlace de descarga directa de alta velocidad</b>"
-    REPLY_TO_DOC_FOR_C2V = "<b> Responda a un archivo con /converttovideo para convertirlo en un archivo de video que se puede transmitir</b>"
+    REPLY_TO_DOC_FOR_C2V = "<b> Responda a un archivo con /converttovideo para convertirlo en un archivo de video que se puede transmitir.</b>"
+    REPLY_TO_DOC_FOR_C2A = "<b> Responda a un archivo con /converttoaudio para convertirlo en un archivo de audio que se puede reproducir.</b>"
     REPLY_TO_DOC_FOR_SCSS = "<b>Responde a un archivo de Telegram para obtener capturas de pantalla</b>"
     REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Responda el nuevo nombre con /rename Nombre_del_archivo.EXTENSIÓN.</b>"
     AFTER_GET_DL_LINK = "Enlace directo <a href='{}'>generado</a>, este enlace es válido por {} días."
