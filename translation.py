@@ -8,69 +8,37 @@ Escriba /help para más información."""
 
     RENAME_403_ERR = "Perdón, tú no tienes permitido renombrar este archivo"
     ABS_TEXT = "¿Qué estás tratando de hacer, compañero?"
-    UPGRADE_TEXT = " <b>Próximamente :(</b>"
-    #-------
+    UPGRADE_TEXT = """Plan de pago  de@RenameArchive_bot
+    
     #Plan: GRATIS
     #Límite de tamaño de archivo: 2Gb
     #Límite diario: ILIMITADO
     #Precio USD: $ 0/Mes
     #CARACTERISTICAS:
-    #👉 <a href="#">Todos los formatos de video compatibles https://rg3.github.io/youtube-dl/supportedsites.html, ¡Excepto videos HLS!</a>
-    #👉 <a href="#">Obtenga un enlace de descarga directa de alta velocidad de cualquier archivo de Telegram</a>
-    #👉 <a href="#">Obtenga un sticker de Telegram como archivo descargable de Telegram</a>
+    #👉 <a href="#">Renombrar archivos ilimitadamente.</a>
+    #👉 <a href="#">Colocar una miniatura personalizada.</a>
     #-------
-    #Plan: A
+    
+    #Plan: Premium
     #Límite de tamaño de archivo: 2Gb
     #Límite diario: ILIMITADO
-    #Precio USD: $ 1,49/Mes
+    #Precio USD: $ 5/Mes
     #CARACTERISTICAS:
-    #👉 <a href="#">Todos los formatos de video compatibles https://rg3.github.io/youtube-dl/supportedsites.html, ¡Excepto videos HLS!</a>
-    #👉 <a href="#">Obtenga un enlace de descarga directa de alta velocidad de cualquier archivo de Telegram</a>
-    #👉 <a href="#">Obtenga un sticker de Telegram como archivo descargable de Telegram</a>
-    #👉 <a href="#">Sube como archivo desde cualquier enlace HTTP, con soporte de miniaturas personalizadas</a>
+    #👉 <a href="#">Renombrar archivos ilimitadamente.</a>
+    #👉 <a href="#">Colocar una miniatura personalizada.</a>
+    #👉 <a href="#">Obtenga un sticker de Telegram como archivo descargable de Telegram.</a>
+    #👉 <a href="#">Convertir un archivo a video reproducible.</a>
+    #👉 <a href="#">Convertir un archivo a audio reproducible.</a>
+    #👉 <a href="#">Obtenga un enlace de descarga directa de su archivo.</a>
+    #👉 <a href="#">Obtenga capturas de pantalla de cualquier archivo o video. (9 en total).</a>
+    #👉 <a href="#">Recorta videos (desde un archivo o un video).</a>
+    #👉 <a href="#">Genere una miniatura personalizada de dos imágenes.</a>
+    #👉 <a href="#">Próximos beneficios agregados al bot :D</a>
     #-------
-    #Plan: B
-    #Límite de tamaño de archivo: 2Gb
-    #Límite diario: ILIMITADO
-    #Precio USD: $ 1,99/Mes
-    #CARACTERISTICAS:
-    #👉 <a href="#">¡Todos los formatos de video compatibles https://rg3.github.io/youtube-dl/supportedsites.html!</a>
-    #👉 <a href="#">Obtenga un enlace de descarga directa de alta velocidad de cualquier archivo de Telegram</a>
-    #👉 <a href="#">Obtenga un sticker de Telegram como archivo descargable de Telegram</a>
-    #👉 <a href="#">Sube como archivo desde cualquier enlace HTTP, con soporte de miniaturas personalizadas</a>
-    #👉 <a href="#">Convierta a video transmitible, cualquier archivo de Telegram</a>
-    #👉 <a href="#">Convertir a audio de Telegram, los archivos enviados como documentos de Telegram</a>
-    #-------
-    #Plan: C
-    #Límite de tamaño de archivo: 2Gb
-    #Límite diario: ILIMITADO
-    #Precio USD: $ 4,99/Mes
-    #FEATURES:
-    #👉 <a href="#">¡Todos los formatos de video compatibles https://rg3.github.io/youtube-dl/supportedsites.html!</a>
-    #👉 <a href="#">Obtenga un enlace de descarga directa de alta velocidad de cualquier archivo de Telegram</a>
-    #👉 <a href="#">Obtenga un sticker de Telegram como archivo descargable de Telegram</a>
-    #👉 <a href="#">Sube como archivo desde cualquier enlace HTTP, con soporte de miniaturas personalizadas</a>
-    #👉 <a href="#">Convierta a video transmitible, cualquier archivo de Telegram</a>
-    #👉 <a href="#">Convertir a audio de Telegram, los archivos enviados como documentos de Telegram</a>
-    #👉 <a href="#">Cambiar el nombre de los archivos de Telegram, ¡Con soporte de miniaturas personalizadas!</a>
-    #-------
-    #Plan: D
-    #Límite de tamaño de archivo: 2Gb
-    #Límite diario: ILIMITADO
-    #Precio USD: $ 14/Mes
-    #FEATURES:
-    #👉 <a href="#">¡Todos los formatos de video compatibles https://rg3.github.io/youtube-dl/supportedsites.html!</a>
-    #👉 <a href="#">Obtenga un enlace de descarga directa de alta velocidad de cualquier archivo de Telegram</a>
-    #👉 <a href="#">Obtenga un sticker de Telegram como archivo descargable de Telegram</a>
-    #👉 <a href="#">Sube como archivo desde cualquier enlace HTTP, con soporte de miniaturas personalizadas</a>
-    #👉 <a href="#">Convierta a video transmitible, cualquier archivo de Telegram</a>
-    #👉 <a href="#">Convertir a audio de Telegram, los archivos enviados como documentos de Telegram</a>
-    #👉 <a href="#">Cambiar el nombre de los archivos de Telegram, ¡Con soporte de miniaturas personalizadas!</a>
-    #👉 <a href="#">Recortar videos grandes</a>, y <a href="#">Tomar capturas de pantalla</a> de archivos multimedia de Telegram.
-    #👉 <a href="#">Extraer medios comprimidos de Telegram</a>
-    #👉 PLUS, todas las funciones nuevas que se agregarán en el bot próximamente*.
-    #-------
-    #NOTA: Después del pago, debe tomar una captura de pantalla del recibo y enviarla al administrador. @DKzippO """
+    
+    <b>Paypal:</b> skueletor+ventas@gmail.com
+    
+    #NOTA: Después del pago, debe tomar una captura de pantalla del recibo y enviarla al administrador: @DKzippO."""
     FORMAT_SELECTION = "Seleccione el formato deseado: <a href='{}'>el tamaño del archivo puede ser aproximado</a> \nSi desea configurar una miniatura personalizada, envíe la foto antes o rápidamente después de tocar cualquiera de los botones a continuación.\nPuede usar / deletethumbnail para eliminar la miniatura generada automáticamente."
     SET_CUSTOM_USERNAME_PASSWORD = """Si desea descargar videos premium, proporcione en el siguiente formato:
 ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
@@ -97,8 +65,10 @@ ENLACE | NOMBRE DEL ARCHIVO | NOMBRE DE USUARIO | CONTRASEÑA"""
 Telegram ID: <code>{}</code>
 Nombre del plan: GRATIS
 Expira: 10/8/2099
+
 <b>Puedes mejorar tu suscripción con el comando /upgrade</b>"""
     HELP_USER = """<b>El modo de uso del bot es el siguiente 🤓:</b>
+    (tenga en cuenta que los usuarios gratuitos solamente pueden renombrar archivos, revise /me para ver su suscripción).
     
 <b>➡ Renombrar archivos:</b>
 🔹1. Envíame cualquier archivo de Telegram.
@@ -139,7 +109,7 @@ Expira: 10/8/2099
 ➡ Para más bots, únete a @BotsDeAyuda
 Hecho con amor por:</b> 👉 <a href="https://t.me/DKzippO">Skueletor</a> ❤️"""
     REPLY_TO_DOC_GET_LINK = "<b>Responda a un archivo de Telegram para obtener un enlace de descarga directa de alta velocidad</b>"
-    REPLY_TO_DOC_FOR_C2V = "<b> Responda a un archivo con /c2v para convertirlo en un archivo de video que se puede transmitir</b>"
+    REPLY_TO_DOC_FOR_C2V = "<b> Responda a un archivo con /converttovideo para convertirlo en un archivo de video que se puede transmitir</b>"
     REPLY_TO_DOC_FOR_SCSS = "<b>Responde a un archivo de Telegram para obtener capturas de pantalla</b>"
     REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Responda el nuevo nombre con /rename Nombre_del_archivo.EXTENSIÓN.</b>"
     AFTER_GET_DL_LINK = "Enlace directo <a href='{}'>generado</a>, este enlace es válido por {} días."
