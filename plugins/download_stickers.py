@@ -29,7 +29,7 @@ from helper_funcs.display_progress import progress_for_pyrogram
 
 @pyrogram.Client.on_message(pyrogram.filters.sticker)
 async def DownloadStickersBot(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id not in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
                       chat_id=update.chat.id,
