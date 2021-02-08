@@ -138,6 +138,6 @@ async def convert_to_audio(bot, update):
     else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text=Translation.REPLY_TO_DOC_FOR_C2V,
+            text=Translation.REPLY_TO_DOC_FOR_C2A,
             reply_to_message_id=update.message_id
         )
