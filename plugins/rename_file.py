@@ -34,8 +34,8 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
-    if update.from_user.id in Config.AUTH_USERS:
-        await bot.send_messages(
+    if update.from_user.id in Config.BANNED_USERS:
+        await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
