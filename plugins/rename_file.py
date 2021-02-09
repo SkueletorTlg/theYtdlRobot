@@ -106,8 +106,8 @@ async def rename_doc(bot, update):
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
-                logger.info('setting https://telegra.ph/file/c75c3a09c2179e4abadc5.jpg as thumbnail')
-                thumb_image_path = "https://telegra.ph/file/c75c3a09c2179e4abadc5.jpg"
+                logger.info('setting moviez_trends.jpg as thumbnail')
+                thumb_image_path = "moviez_trends.jpg"
             else:
                 width = 0
                 height = 0
@@ -132,7 +132,7 @@ async def rename_doc(bot, update):
                 document=new_file_name,
                 thumb=thumb_image_path,
                 caption=caption_str,
-                # reply_markup=reply_markup,
+                reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
