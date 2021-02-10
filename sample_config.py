@@ -33,7 +33,7 @@ class Config(object):
     # set timeout for subprocess
     PROCESS_MAX_TIMEOUT = 100000
     # watermark file
-    DEF_WATER_MARK_FILE = ""
+    DEF_WATER_MARK_FILE = "Renombrado por @RenameArchive_bot"
     SHORT_LINK_API_URL = os.environ.get("SHORT_LINK_API_URL", "https://za.gl/api")
     SHORT_LINK_API_KEY = os.environ.get("SHORT_LINK_API_KEY", "")
     IS_TEAM_DRIVE = os.environ.get("IS_TEAM_DRIVE", False)
