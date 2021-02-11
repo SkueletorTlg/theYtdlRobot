@@ -86,7 +86,7 @@ async def generate_custom_thumbnail(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.photo)
 async def save_photo(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
+    if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
