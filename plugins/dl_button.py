@@ -172,7 +172,7 @@ async def ddl_call_back(bot, update):
                 img.save(thumb_image_path, "JPEG")
                 # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
             else:
-                thumb_image_path = 'moviez_trends.jpg'
+                thumb_image_path = 'monstercine.jpg'
             start_time = time.time()
             # try to upload file
             if tg_send_type == "audio":
