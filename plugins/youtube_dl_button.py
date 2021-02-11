@@ -65,14 +65,6 @@ async def youtube_dl_call_back(bot, update):
         if len(url_parts) == 2:
             youtube_dl_url = url_parts[0]
             custom_file_name = url_parts[1]
-            if len(custom_file_name) > 64:
-                await update.message.reply_text(
-                    Translation.IFLONG_FILE_NAME.format(
-                        alimit="64",
-                        num=len(custom_file_name)
-                    )
-                )
-                return
         elif len(url_parts) == 4:
             youtube_dl_url = url_parts[0]
             custom_file_name = url_parts[1]
@@ -134,7 +126,7 @@ async def youtube_dl_call_back(bot, update):
     else:
         # command_to_exec = ["youtube-dl", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
         minus_f_format = youtube_dl_format
-        if "youtu" in youtube_dl_url or "zee5" in youtube_dl_url:
+        if "youtu" in youtube_dl_url:
             minus_f_format = youtube_dl_format + "+bestaudio"
         command_to_exec = [
             "youtube-dl",
@@ -170,7 +162,7 @@ async def youtube_dl_call_back(bot, update):
     t_response = stdout.decode().strip()
     logger.info(e_response)
     logger.info(t_response)
-    ad_string_to_replace = "Informe este problema en https://yt-dl.org/bug. Asegúrese de estar utilizando la última versión; consulte https://yt-dl.org/update sobre cómo actualizar. Asegúrese de llamar a youtube-dl con la marca --verbose e incluya su salida completa."
+    ad_string_to_replace = "Informe este problema en https://yt-dl.org/bug. Asegúrese de que está utilizando la última versión; consulte https://yt-dl.org/update sobre cómo actualizar. Asegúrese de llamar a youtube-dl con la marca --verbose e incluya su salida completa."
     if e_response and ad_string_to_replace in e_response:
         error_message = e_response.replace(ad_string_to_replace, "")
         await bot.edit_message_text(
@@ -248,6 +240,7 @@ async def youtube_dl_call_back(bot, update):
                     img.resize((90, height))
                 img.save(thumb_image_path, "JPEG")
                 # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
+                
             else:
                 thumb_image_path = None
             start_time = time.time()
@@ -332,12 +325,12 @@ async def youtube_dl_call_back(bot, update):
                 i = 0
                 caption = "© @RenameArchive_bot"
                 if is_w_f:
-                    caption = "Aquiere el plan D con /upgrade para remover la marca de agua\n© @RenameArchive_bot"
+                  caption = "Aquiere el plan Premium con /upgrade para remover la marca de agua\n© @RenameArchive_bot"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
-                                pyrogram.types.InputMediaPhoto(
+                                pyrogram.InputMediaPhoto(
                                     media=image,
                                     caption=caption,
                                     parse_mode="html"
@@ -345,7 +338,7 @@ async def youtube_dl_call_back(bot, update):
                             )
                         else:
                             media_album_p.append(
-                                pyrogram.types.InputMediaPhoto(
+                                pyrogram.InputMediaPhoto(
                                     media=image
                                 )
                             )
